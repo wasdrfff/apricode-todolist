@@ -1,0 +1,27 @@
+$color: #cecece;
+$colorBorder: black;
+
+.contentBody {
+  &-items {
+    margin: 15px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    align-items: center;
+    background-color: $color;
+    border: 1px solid $colorBorder;
+    @media screen and(max-width:380px) {
+      margin: 0px 0px 0px 5px;
+      padding: 5px 0;
+      width: 90%;
+      white-space: nowrap;
+    }
+  }
+  &-checkInput {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
+}

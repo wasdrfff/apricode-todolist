@@ -1,0 +1,55 @@
+.appTag {
+  display: flex;
+  justify-content: center;
+}
+.appContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  &-input {
+    text-align: center;
+    width: 48%;
+    text-overflow: ellipsis;
+    @media screen and(max-width:390px) {
+      margin-top: 8px;
+    }
+  }
+
+  &-buttonForAdd {
+    margin-top: 10px;
+    background-color: rgb(113, 136, 60);
+    border: 0px;
+    padding: 10px 0;
+    cursor: pointer;
+    width: 48%;
+    @media screen and(max-width:390px) {
+      width: 160px;
+    }
+
+    &-text {
+      word-wrap: break-word;
+      text-align: center;
+      font-size: 15px;
+      color: white;
+    }
+  }
+  &-buttonForDelete {
+    margin-top: 10px;
+    background-color: red;
+    padding: 10px 0;
+    cursor: pointer;
+    border: 0px;
+    width: 48%;
+    @media screen and(max-width:390px) {
+      width: 160px;
+      padding: 1px 0;
+    }
+    &-text {
+      word-wrap: break-word;
+      text-align: center;
+      font-size: 15px;
+      color: white;
+    }
+  }
+}

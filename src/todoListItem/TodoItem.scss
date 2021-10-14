@@ -1,0 +1,11 @@
+$colorBorder: black;
+.item {
+  border-bottom: 1px solid $colorBorder;
+  display: flex;
+  justify-content: flex-start;
+  width: 180px;
+
+  @media screen and(max-width:390px) {
+    white-space: inherit;
+  }
+}
