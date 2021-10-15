@@ -6,7 +6,7 @@ type TodoItemProps = {
   onChange: (id: number) => void;
 };
 
-function TodoItem({ item, onChange }: TodoItemProps) {
+const TodoItem = ({ item, onChange }: TodoItemProps) => {
   return (
     <div className="item">
       <p>
@@ -19,5 +19,5 @@ function TodoItem({ item, onChange }: TodoItemProps) {
       </p>
     </div>
   );
-}
+};
 export default TodoItem;

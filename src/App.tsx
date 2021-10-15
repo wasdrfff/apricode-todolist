@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import TodoItems from "./todo-list/TodoItems";
 import { observer } from "mobx-react-lite";
 import storeTodos from "./store/storeTodos";
@@ -12,7 +12,7 @@ export type Todo = {
 };
 const App = observer(() => {
   const [newTaskName, setNewTaskName] = useState("");
-  function addTask() {
+  const addTask = useCallback(() => {
     const newTask = {
       id: storeTodos.todos.length
         ? storeTodos.todos[storeTodos.todos.length - 1].id + 1
@@ -21,14 +21,14 @@ const App = observer(() => {
       completed: false,
     };
     storeTodos.addTodo(newTask);
-  }
-  function deletedTask() {
+  }, [newTaskName]);
+  const deletedTask = useCallback(() => {
     storeTodos.deleteTodo();
-  }
+  }, []);
   return (
     <div className="appWrapper">
       <h1 className="appTag">TodoList</h1>
-      <TodoItems items={storeTodos.todos} />
+      <TodoItems />
       <div className="appContent">
         <input
           className="appContent-input"
